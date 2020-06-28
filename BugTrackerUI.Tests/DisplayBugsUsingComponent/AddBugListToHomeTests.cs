@@ -11,23 +11,23 @@ namespace M6_BugTrackerUI.Tests.DisplayBugsUsingComponent
 {
     public class M6_07_AddBugListToHomeTests
     {
-        [Fact(DisplayName = "Add the BugList component to Index @add-buglist-to-index")]
-        public void AddNavigationToLayoutTest()
-        {
-            var filePath = TestHelpers.GetRootString() + "BugTrackerUI"
-                + Path.DirectorySeparatorChar + "Pages"
-                + Path.DirectorySeparatorChar + "Index.razor";
+        //[Fact(DisplayName = "Add the BugList component to Index @add-buglist-to-index")]
+        //public void AddNavigationToLayoutTest()
+        //{
+        //    var filePath = TestHelpers.GetRootString() + "BugTrackerUI"
+        //        + Path.DirectorySeparatorChar + "Pages"
+        //        + Path.DirectorySeparatorChar + "Index.razor";
 
-            Assert.True(File.Exists(filePath), "`Index.razor` should exist in the Shared folder.");
+        //    Assert.True(File.Exists(filePath), "`Index.razor` should exist in the Shared folder.");
 
-            var doc = new HtmlDocument();
-            doc.Load(filePath);
+        //    var doc = new HtmlDocument();
+        //    doc.Load(filePath);
 
-            var leftNav = doc.DocumentNode.Descendants("BugList")?.FirstOrDefault();
+        //    var leftNav = doc.DocumentNode.Descendants("BugList")?.FirstOrDefault();
 
-            Assert.True(leftNav != null,
-                "`Index.razor` should contain the `BugList` component.");
+        //    Assert.True(leftNav != null,
+        //        "`Index.razor` should contain the `BugList` component.");
 
-        }
+        //}
     }
 }
